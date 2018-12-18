@@ -1,0 +1,115 @@
+<?php 
+include ("to_do.php");
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>to_do list</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="todo.css">
+    
+ 
+</head>
+<body>
+
+        <script>
+                function allowDrop(ev) {
+                  ev.preventDefault();
+                }
+                
+                function drag(ev) {
+                  ev.dataTransfer.setData("text", ev.target.id);
+                }
+                
+                function drop(ev) {
+                  ev.preventDefault();
+                  var data = ev.dataTransfer.getData("text");
+                  ev.target.appendChild(document.getElementById(data));
+                }
+                </script>
+    </div>
+</div>
+<div class="container-fluid ">
+        <div class="container">
+            <div class="row bas">
+                <div class="col-md-3">
+<h1>To do list</h1>
+<h2>à faire</h2>
+</div>
+    </div>
+        </div>
+            </div>
+    <div class="container-fluid">
+            <div class="container">
+               
+    <label for="sujet" class="col-md-12 " ondrop="drop(event)" ondragover="allowDrop(event)">sujet:</label>
+    <div class="col-md-3">
+    <label class="checkbox-inline"><input type="checkbox" name="sujet[]" value="1" checked>Aller en cours puis rentrer</label>
+    </div>
+    <div class="col-md-3">
+    <label class="checkbox-inline"><input type="checkbox" name="sujet[]" value="2" checked>Manger de la merde</label>
+    </div>
+    <div class="col-md-3">
+    <label class="checkbox-inline"><input type="checkbox" name="sujet[]" value="3" checked>Allumer fornite car je suis une grosse victime</label>
+    </div>
+    <div class="col-md-3">
+    <label class="checkbox-inline"><input type="checkbox" name="sujet[]" value="4" >Trop peu dormir</label>
+</div>
+
+    </div>
+        </div>
+        <div class="container-fluid " >
+                <div class="container">
+                    <div class=" bas">
+                        <div class="col-md-3">
+        <input type="submit" class="btn btn-primary col-md-6" value="C'est fait">
+        
+        </div>
+            </div>
+                </div>
+                    </div>
+
+                </div>
+            </div>
+                </div>
+                    </div>
+            <div class="container-fluid">
+                    <div class="container">
+                       
+            <label for="sujet" class="col-md-12">Archives:</label>
+            <div class="col-md-3">
+            <label class="checkbox-inline"><input type="checkbox" name="sujet[]" value="1" checked>Aller en cours puis rentrer</label>
+            </div>
+
+        </div>
+        
+        <div class="container-fluid">
+                <div class="container">
+                    
+                <div class="col-md-5 ">
+            
+                <h2>ajouter une tache</h2>
+                <textarea type="text" name="message" class="form-control " placeholder="Votre nouvelle tache ici" required></textarea>
+                <input type="submit" class="btn btn-primary col-md-6" value="valider la nouvelle tache">
+                </div>
+                </div>
+                                    
+                </div>
+
+
+                <div class="test1" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h1 draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">coucou</h1>
+                </div>
+
+                <div class="test2" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                   <h1>yo</h1>
+                </div>
+
+                </body>
+</html>

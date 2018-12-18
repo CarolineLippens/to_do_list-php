@@ -1,0 +1,20 @@
+body{
+    background-color:#3E2644;
+    font-family: 'Ubuntu', sans-serif;
+}
+div.container{
+    background-color: #503A56;
+    color: F2F1F2;
+}
+.btn{
+    background-color:#6C5A72;
+    border: 1px solid rgb(218, 218, 218);
+}
+.btn:hover{
+    background-color:rgb(218, 218, 218);
+    color: black;
+    border: 1px solid rgb(43, 43, 43);
+}
+.btnbas{
+    margin-top:20px;
+}
